@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>59f65d65-08a2-4357-8322-83d982d5e877</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="internal-nlog.txt" />
+    <None Remove="internal.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+    <PackageReference Include="NLog" Version="4.7.6" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="1.6.5" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.9.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\CommonLogger\CommonLogger.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\Models\Models.csproj" />
+    <ProjectReference Include="..\..\Robo.Database\Robo.Database.csproj" />
+    <ProjectReference Include="..\BitfinexAdapter.Logic\BitfinexAdapter.Logic.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="nlog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>

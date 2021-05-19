@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Remote.Linq.Newtonsoft.Json" Version="6.3.0" />
+    <PackageReference Include="Scrutor" Version="3.3.0" />
+    <PackageReference Include="StackExchange.Redis" Version="2.1.55" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj" />
+  </ItemGroup>
+
+</Project>
