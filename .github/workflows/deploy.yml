@@ -1,0 +1,19 @@
+name: deployment workflow
+on:
+  push:
+    branches: [ master ]
+    
+jobs:
+  deploy_job:
+    name: deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: some command
+      uses: savelevmd/ssh-actions@master
+      with:
+        host: 94.250.252.236
+        username: savelevmd
+        key: ${{ secrets.QRB_KEY}}
+        port: 22
+        script: |
+          mkdir is_work
