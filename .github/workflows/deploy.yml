@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: some command
-      uses: savelevmd/RoboTrader@v0.2.1
+      uses: SavelevMD/ssh-command-action@master
       with:
         host: 94.250.252.236
         username: stickermark
