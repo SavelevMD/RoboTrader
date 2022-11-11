@@ -12,7 +12,7 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: 94.250.252.236
-        username: mx
+        username: root
         key: ${{ secrets.QRB_KEY}}
         port: 22
         script: |
