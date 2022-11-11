@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: some command
-      uses: savelevmd/ssh-actions@master
+      uses: savelevmd/robotrader@master
       with:
         host: 94.250.252.236
         username: savelevmd
