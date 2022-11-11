@@ -8,8 +8,8 @@ jobs:
     name: deploy
     runs-on: ubuntu-latest
     steps:
-    - name: some command
-      uses: savelevmd/robotrader@master
+    - name: SSH Command
+      uses: D3rHase/ssh-command-action@v0.2.1
       with:
         host: 94.250.252.236
         username: savelevmd
